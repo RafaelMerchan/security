@@ -18,6 +18,7 @@ router.get('/', async function(req, res, next) {
   let users = await Users.findAll({ })
   res.render('register', { title: 'User Registration', users: users });
 });
+
 router.get('/getToken', function (req, res, next) {
   
   /* Lee las cookies "jwt-token" y "error" */
